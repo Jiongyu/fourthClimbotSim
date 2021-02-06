@@ -1,0 +1,27 @@
+<launch>
+  <arg name="robot_name" default="climbot6d"/>
+  <arg name="gui" default="true" />
+  <param name="use_gui" value="$(arg gui)" />
+
+  <param name="robot_description" command="$(find xacro)/xacro '$(find mr_description)/robots/climbot6d_g7.urdf.xacro'" />
+  <rosparam>
+    dependent_joints:
+      G0_Joint1: {parent: G0_Joint, factor: 1 }
+      G7_Joint1: {parent: G7_Joint, factor: 1 }
+  </rosparam>
+  <node name="rviz"  pkg="rviz"  type="rviz" args="-d $(find mr_description)/rviz/climbot5d_test.rviz" />
+
+  <node name="joint_state_publisher_gui" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" >
+    <rosparam param="source_list">["/mr_simulation/joint_commands"]</rosparam>
+    <param name="use_gui" value="$(arg gui)"/>
+    <param name="gui_caption" value="BIRL"/>  
+    <param name="publish_frequency" type="double" value="20.0" />
+    <remap from="/joint_states" to="/mr_simulation/joint_states"/>
+  </node>
+
+
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher">
+      <remap from="/joint_states" to="/mr_simulation/joint_states"/>
+  </node>
+
+</launch>

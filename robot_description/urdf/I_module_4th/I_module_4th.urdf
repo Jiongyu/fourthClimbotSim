@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="I_module">
+  <link
+    name="VI_InLink_4th">
+    <inertial>
+      <origin
+        xyz="0.00010582 -0.00010564 0.078074"
+        rpy="0 0 0" />
+      <mass
+        value="0.5" />
+      <inertia
+        ixx="0.0020854"
+        ixy="1.8653E-06"
+        ixz="3.8481E-07"
+        iyy="0.002097"
+        iyz="-3.6471E-07"
+        izz="0.0010917" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://I_module/meshes/VI_InLink_4th.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://I_module/meshes/VI_InLink_4th.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="I_InLInk_4th">
+    <inertial>
+      <origin
+        xyz="0.00017879 -0.00017813 0.047968"
+        rpy="0 0 0" />
+      <mass
+        value="1.2" />
+      <inertia
+        ixx="0.00057835"
+        ixy="1.8161E-06"
+        ixz="-1.3137E-06"
+        iyy="0.00058218"
+        iyz="1.324E-06"
+        izz="0.00066749" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://I_module/meshes/I_InLInk_4th.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.96863 0.25882 0.25882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://I_module/meshes/I_InLInk_4th.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="VI_InLink"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="VI_InLink_4th" />
+    <child
+      link="I_InLInk_4th" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="I_OutLink_4th">
+    <inertial>
+      <origin
+        xyz="-0.046419 2.0299E-06 3.8153E-07"
+        rpy="0 0 0" />
+      <mass
+        value="1" />
+      <inertia
+        ixx="0.00030154"
+        ixy="1.7546E-09"
+        ixz="-9.4475E-10"
+        iyy="0.00021262"
+        iyz="-2.5116E-06"
+        izz="0.0002126" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://I_module/meshes/I_OutLink_4th.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.96863 0.25882 0.25882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://I_module/meshes/I_OutLink_4th.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="I_Joint"
+    type="continuous">
+    <origin
+      xyz="0 0 0.091"
+      rpy="2.3579 1.5708 0" />
+    <parent
+      link="I_InLInk_4th" />
+    <child
+      link="I_OutLink_4th" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="VI_OutLink_4th">
+    <inertial>
+      <origin
+        xyz="0.00010582 -0.00010564 -0.081426"
+        rpy="0 0 0" />
+      <mass
+        value="0.5" />
+      <inertia
+        ixx="0.0020854"
+        ixy="1.8653E-06"
+        ixz="3.8481E-07"
+        iyy="0.002097"
+        iyz="-3.6471E-07"
+        izz="0.0010917" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://I_module/meshes/VI_OutLink_4th.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://I_module/meshes/VI_OutLink_4th.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="VI_OutJoint"
+    type="fixed">
+    <origin
+      xyz="-0.0685 0 0"
+      rpy="-1.5708 0.78714 1.5708" />
+    <parent
+      link="I_OutLink_4th" />
+    <child
+      link="VI_OutLink_4th" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>

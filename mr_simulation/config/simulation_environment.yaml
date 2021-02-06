@@ -1,0 +1,22 @@
+  # note: name中字符名必须与杆件名相同
+  # pos_x, pos_y, pos_z : 生成物体中心点位置，单位 米 
+  # ori_r, ori_p, ori_y ： 生成物体中心点姿态(rpy), 单位 度
+  # scale_x,scale_y,scale_z : 生成物体延坐标轴两侧展开尺寸， 单位 米 
+
+environment_poles:
+  name: [p1 ]
+  p1: {pos_x: 0, pos_y: 0, pos_z: 0.9, ori_r: 0, ori_p: 0, ori_y: 0, scale_x: 0.05, scale_y: 0.05, scale_z: 2}
+  # p2: {pos_x: 0, pos_y: 0, pos_z: 1, ori_r: 0, ori_p: 90, ori_y: 0, scale_x: 0.05, scale_y: 0.05, scale_z: 2}
+  # p3: {pos_x: 0, pos_y: 0, pos_z: 1.5, ori_r: 0, ori_p: 90, ori_y: 0, scale_x: 0.05, scale_y: 0.05, scale_z: 2}
+
+environment_walls:
+  name: [w1, w2, w3]
+  w1: {pos_x: 1, pos_y: 0, pos_z: 0, ori_r: 0, ori_p: 0, ori_y: 0, scale_x: 0.01, scale_y: 1, scale_z: 1}
+  w2: {pos_x: 2, pos_y: 0, pos_z: 0, ori_r: 0, ori_p: 0, ori_y: 0, scale_x: 0.01, scale_y: 1, scale_z: 1}
+  w3: {pos_x: 3, pos_y: 0, pos_z: 0, ori_r: 0, ori_p: 0, ori_y: 0, scale_x: 0.01, scale_y: 1, scale_z: 1}
+
+environment_points:
+  name: [p1, p2, p3]
+  p1: {pos_x: 1, pos_y: 0.5, pos_z: 1.0, ori_r: 0, ori_p: 0, ori_y: 0, scale_x: 0.05, scale_y: 0.05, scale_z: 0.05}
+  p2: {pos_x: 2, pos_y: 0.5, pos_z: 1.0, ori_r: 0, ori_p: 0, ori_y: 0, scale_x: 0.05, scale_y: 0.05, scale_z: 0.05}
+  p3: {pos_x: 3, pos_y: 0.5, pos_z: 1.0, ori_r: 0, ori_p: 0, ori_y: 0, scale_x: 0.05, scale_y: 0.05, scale_z: 0.05}

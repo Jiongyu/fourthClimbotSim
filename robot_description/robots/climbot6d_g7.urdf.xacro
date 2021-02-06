@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="climbot6d">
+
+  <xacro:property name="pi" value="3.1415926535897931" />
+  
+<!-- materials for visualization -->
+  <xacro:include filename="$(find mr_description)/urdf/materials.urdf.xacro" />
+
+  <!-- I Module -->
+  <xacro:include filename="$(find mr_description)/urdf/I_module_4th/I_module_4th.urdf.xacro" />
+
+  <!-- T Module -->
+  <xacro:include filename="$(find mr_description)/urdf/T_module_4th/T_module_4th.urdf.xacro" />
+  
+  <!-- I Invert Module -->
+  <xacro:include filename="$(find mr_description)/urdf/I_module_4th/I_invert_4th.urdf.xacro" />
+  
+  <!-- T Invert Module -->
+  <xacro:include filename="$(find mr_description)/urdf/T_module_4th/T_invert_4th.urdf.xacro" />
+
+  <!-- Gripper100 Module -->
+  <xacro:include filename="$(find mr_description)/urdf/G_module.urdf.xacro" />
+    
+  <!-- Gripper100 invert Module -->
+  <xacro:include filename="$(find mr_description)/urdf/G_invert.urdf.xacro" />
+  
+  <!-- sleeve_link Module -->
+  <xacro:include filename="$(find mr_description)/urdf/sleeve_link_4th.urdf.xacro" />
+<!-- Now we can start using the macros included above to define the actual robot -->
+
+  <!-- The first use of a macro.  This one was defined in base.urdf.xacro above.
+       A macro like this will expand to a set of link and joint definitions, and to additional
+       Gazebo-related extensions (sensor plugins, etc).  The macro takes an argument, name, 
+       that equals "base", and uses it to generate names for its component links and joints 
+       (e.g., base_link).  The included origin block is also an argument to the macro.  By convention, 
+       the origin block defines where the component is w.r.t its parent (in this case the parent 
+       is the world frame). For more, see http://www.ros.org/wiki/xacro -->
+
+<!--    climbot move group 1-->
+  <link name="base"/>
+
+<!-- <joint name="base_g0" type="fixed">
+  <origin rpy="-1.57 0 1.57" xyz="0 0 0"/>
+  <parent link="base"/>
+  <child link="base_gripper_0"/>
+</joint>
+
+  <link name="base_gripper_0"/>
+
+  <xacro:G_module name="G0" parent="base_gripper_0">
+    <origin xyz="0.002 -0.179 -0.002" rpy="${-pi*0.5} ${pi*0.5} 0" />
+  </xacro:G_module>
+  
+  <xacro:I_module_4th name="I1" parent="G0_palm_link">
+    <origin xyz="0 0 0" rpy="${pi*0.5} 0 0" />
+  </xacro:I_module_4th>
+
+  <xacro:T_invert_4th name="T2" parent="I1_Link">
+    <origin xyz="0.014 0.110 0" rpy="${pi * 0.5} 0 0" />
+  </xacro:T_invert_4th>
+
+  <xacro:I_module_4th name="I3" parent="T2_Link">
+    <origin xyz="0 0 0" rpy="${pi} 0 0" />
+  </xacro:I_module_4th>
+  
+  <xacro:T_invert_4th name="T4" parent="I3_Link" >
+    <origin xyz="0.014 0.111 0" rpy="${-0.5 * pi} ${pi} ${pi}" /> 
+  </xacro:T_invert_4th>
+
+  <xacro:sleeve_link name="sl" parent="T4_Link" >
+    <origin xyz="0 0 0" rpy="${pi} 0 0" />
+  </xacro:sleeve_link>
+  
+  <xacro:T_module_4th name="T5" parent="sl_Link">
+    <origin xyz="0 0 0" rpy="0 0 ${pi}" />
+  </xacro:T_module_4th>
+
+  <xacro:I_module_4th name="I6" parent="T5_Link">
+    <origin xyz="0 0 0.159" rpy="${pi} 0 0" />
+  </xacro:I_module_4th>
+  
+  <xacro:G_module name="G7" parent="I6_Link">
+    <origin xyz="0 0 -0.160" rpy="${pi} 0 ${0.5*pi}" />
+  </xacro:G_module> -->
+  
+
+<!-- #################################################################### -->
+<joint name="base_g7" type="fixed">
+  <origin rpy="1.57 0 1.57" xyz="0.003 0 1.611"/>
+  <parent link="base"/>
+  <child link="base_gripper_7"/>
+</joint>
+
+
+ <link name="base_gripper_7" />
+   
+  <xacro:G_module name="G7" parent="base_gripper_7">
+    <origin xyz="0 -0.17836 0" rpy="${-pi*0.5} ${pi*0.5} 0" />
+  </xacro:G_module>
+
+  <xacro:I_module_4th name="I6" parent="G7_palm_link">
+    <origin xyz="0 0 0" rpy=" ${pi*0.5} 0 0" />
+  </xacro:I_module_4th>
+
+  <xacro:T_invert_4th name="T5" parent="I6_Link">
+    <origin xyz="-0.014 -0.111 0" rpy="${pi*0.5} 0 ${pi}" />
+  </xacro:T_invert_4th>
+
+  <xacro:sleeve_link name="sl" parent="T5_Link" >
+    <origin xyz="0 0 0" rpy="${pi} 0 0" />
+  </xacro:sleeve_link>
+
+  <xacro:T_module_4th name="T4" parent="sl_Link">
+    <origin xyz="0 0 0" rpy="0 0 ${pi}" />
+  </xacro:T_module_4th>
+
+  <xacro:I_module_4th name="I3" parent="T4_Link">
+    <origin xyz="0 0.0 0.159" rpy="0 ${pi} 0" />
+  </xacro:I_module_4th> 
+
+  <xacro:T_module_4th name="T2" parent="I3_Link">
+    <origin xyz="0 -0.001 -0.160" rpy="${pi} 0 ${pi}" />
+  </xacro:T_module_4th>
+
+  <xacro:I_module_4th name="I1" parent="T2_Link">
+    <origin xyz="0 0 0.159" rpy="${pi}  0 0" />
+  </xacro:I_module_4th>
+
+  <xacro:G_module name="G0" parent="I1_Link">
+    <origin xyz="0 0.001 -0.160" rpy="0 ${pi} ${0.5 * pi}" />
+  </xacro:G_module>
+
+</robot> 

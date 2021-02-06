@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="T_invert_4th">
+  <link
+    name="VT_OutLink_4th">
+    <inertial>
+      <origin
+        xyz="-0.0062199 0.11151 4.712E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.5" />
+      <inertia
+        ixx="0.0043213"
+        ixy="0.00020387"
+        ixz="5.1881E-07"
+        iyy="0.0020727"
+        iyz="-4.834E-07"
+        izz="0.0045007" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://T_invert_4th/meshes/VT_OutLink_4th.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://T_invert_4th/meshes/VT_OutLink_4th.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="T_OutLink_4th">
+    <inertial>
+      <origin
+        xyz="-0.017304 0.030846 2.9874E-05"
+        rpy="0 0 0" />
+      <mass
+        value="1" />
+      <inertia
+        ixx="0.0012074"
+        ixy="-0.00030836"
+        ixz="-2.8266E-07"
+        iyy="0.00068337"
+        iyz="-3.7727E-07"
+        izz="0.0011522" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://T_invert_4th/meshes/T_OutLink_4th.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.16863 0.16863 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://T_invert_4th/meshes/T_OutLink_4th.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="V_OutJoint"
+    type="fixed">
+    <origin
+      xyz="-0.0145 0 0.1105"
+      rpy="1.5708 0 0" />
+    <parent
+      link="VT_OutLink_4th" />
+    <child
+      link="T_OutLink_4th" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="T_InLink_4th">
+    <inertial>
+      <origin
+        xyz="0.014606 -0.023405 6.7266E-05"
+        rpy="0 0 0" />
+      <mass
+        value="1.2" />
+      <inertia
+        ixx="0.0016912"
+        ixy="-8.2481E-05"
+        ixz="-1.3704E-06"
+        iyy="0.00075608"
+        iyz="-5.6454E-07"
+        izz="0.0014025" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://T_invert_4th/meshes/T_InLink_4th.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.16863 0.16863 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://T_invert_4th/meshes/T_InLink_4th.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="T_Joint"
+    type="revolute">
+    <origin
+      xyz="0.0145 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="T_OutLink_4th" />
+    <child
+      link="T_InLink_4th" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-2.07"
+      upper="2.07"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="VT_InLink_4th">
+    <inertial>
+      <origin
+        xyz="-0.0062199 -4.712E-05 0.11741"
+        rpy="0 0 0" />
+      <mass
+        value="0.5" />
+      <inertia
+        ixx="0.0043213"
+        ixy="-5.1881E-07"
+        ixz="0.00020387"
+        iyy="0.0045007"
+        iyz="4.834E-07"
+        izz="0.0020727" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://T_invert_4th/meshes/VT_InLink_4th.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://T_invert_4th/meshes/VT_InLink_4th.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="V_InJoint"
+    type="fixed">
+    <origin
+      xyz="0 -0.1164 0"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="T_InLink_4th" />
+    <child
+      link="VT_InLink_4th" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>

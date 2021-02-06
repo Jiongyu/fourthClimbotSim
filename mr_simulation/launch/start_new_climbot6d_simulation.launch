@@ -1,0 +1,21 @@
+<launch>
+    <param name ="/use_sim_time" value="false"/>
+    
+    <!-- 仿真配置文件 -->
+    <rosparam command="load" file="$(find mr_simulation)/config/climbot6d_simulation_config.yaml" />
+    <!-- 仿真环境配置文件 -->
+    <rosparam command="load" file="$(find mr_simulation)/config/simulation_environment.yaml" />
+
+    <!-- 广播初始化世界坐标 -->
+    <node name="static_world_A_broadcaster_G0" pkg="mr_simulation" type="static_world_A_broadcaster" args="base 0 0 0 0 0 0"/>
+
+    <!-- 启动机器人rviz -->
+    <include file="$(find mr_description)/launch/climbot6d_display.launch"/>
+
+    <!-- 构建环境 -->
+    <node name="generate_environment_by_yaml" pkg="mr_simulation" type="generate_environment_by_yaml" output="screen"/>
+
+    <!-- 执行路径脚本命令 -->
+    <node name="climbot5d_control_robot_by_conf_file" pkg="mr_simulation" type="climbot6d_control_robot_by_conf_file" output="screen"/>
+
+</launch>

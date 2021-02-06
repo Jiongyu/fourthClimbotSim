@@ -1,0 +1,803 @@
+Panels:
+  - Class: rviz/Displays
+    Help Height: 78
+    Name: Displays
+    Property Tree Widget:
+      Expanded:
+        - /Global Options1
+        - /Status1
+        - /TF1
+        - /TF1/Frames1
+        - /MarkerArray1
+      Splitter Ratio: 0.5
+    Tree Height: 768
+  - Class: rviz/Selection
+    Name: Selection
+  - Class: rviz/Tool Properties
+    Expanded:
+      - /2D Pose Estimate1
+      - /2D Nav Goal1
+      - /Publish Point1
+    Name: Tool Properties
+    Splitter Ratio: 0.588679016
+  - Class: rviz/Views
+    Expanded:
+      - /Current View1
+    Name: Views
+    Splitter Ratio: 0.5
+  - Class: rviz/Time
+    Experimental: false
+    Name: Time
+    SyncMode: 0
+    SyncSource: ""
+Toolbars:
+  toolButtonStyle: 2
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Alpha: 0.5
+      Cell Size: 1
+      Class: rviz/Grid
+      Color: 160; 160; 164
+      Enabled: true
+      Line Style:
+        Line Width: 0.0299999993
+        Value: Lines
+      Name: Grid
+      Normal Cell Count: 0
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Plane: XY
+      Plane Cell Count: 10
+      Reference Frame: <Fixed Frame>
+      Value: true
+    - Alpha: 1
+      Class: rviz/RobotModel
+      Collision Enabled: false
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        G0_Link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        G0_finger_link_l:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        G0_finger_link_r:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        G0_palm_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        G0_tcp:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        G7_Link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        G7_finger_link_l:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        G7_finger_link_r:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        G7_palm_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        G7_tcp:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        I1_InLink_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        I1_Link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        I1_Lr_Link_0:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        I1_OutLink_2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        I3_InLink_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        I3_Link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        I3_Lr_Link_0:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        I3_OutLink_2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        I6_InLink_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        I6_Link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        I6_Lr_Link_0:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        I6_OutLink_2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link Tree Style: Links in Alphabetic Order
+        T2_InLink_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        T2_Link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        T2_Lr_Link_3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        T2_Offset_Link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        T2_Offset_Lr_Link_3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        T2_OutLink_2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        T4_InLink_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        T4_Link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        T4_Lr_Link_3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        T4_Offset_Link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        T4_Offset_Lr_Link_3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        T4_OutLink_2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        T5_InLink_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        T5_Link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        T5_Lr_Link_0:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        T5_OutLink_2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        _G0_Link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        _G0_finger_link_l:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        _G0_finger_link_r:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        _G0_palm_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        _G0_tcp:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        _G7_Link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        _G7_finger_link_l:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        _G7_finger_link_r:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        _G7_palm_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        _G7_tcp:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        _I1_InLink_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        _I1_Link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        _I1_Lr_Link_0:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        _I1_OutLink_2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        _I3_InLink_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        _I3_Link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        _I3_Lr_Link_0:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        _I3_OutLink_2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        _I6_InLink_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        _I6_Link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        _I6_Lr_Link_0:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        _I6_OutLink_2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        _T2_InLink_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        _T2_Link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        _T2_Lr_Link_0:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        _T2_OutLink_2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        _T4_InLink_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        _T4_Link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        _T4_Lr_Link_0:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        _T4_OutLink_2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        _T5_InLink_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        _T5_Link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        _T5_Lr_Link_3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        _T5_Offset_Link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        _T5_Offset_Lr_Link_3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        _T5_OutLink_2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        _sl_Link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        _sl_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        base:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        base_gripper_0:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        base_gripper_7:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        sl_Link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        sl_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+      Name: RobotModel
+      Robot Description: robot_description
+      TF Prefix: ""
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+    - Class: rviz/TF
+      Enabled: true
+      Frame Timeout: 15
+      Frames:
+        All Enabled: false
+        G0_Link:
+          Value: false
+        G0_finger_link_l:
+          Value: false
+        G0_finger_link_r:
+          Value: false
+        G0_palm_link:
+          Value: false
+        G0_tcp:
+          Value: false
+        G7_Link:
+          Value: false
+        G7_finger_link_l:
+          Value: false
+        G7_finger_link_r:
+          Value: false
+        G7_palm_link:
+          Value: false
+        G7_tcp:
+          Value: false
+        I1_InLink_1:
+          Value: false
+        I1_Link:
+          Value: false
+        I1_Lr_Link_0:
+          Value: false
+        I1_OutLink_2:
+          Value: false
+        I3_InLink_1:
+          Value: false
+        I3_Link:
+          Value: false
+        I3_Lr_Link_0:
+          Value: false
+        I3_OutLink_2:
+          Value: false
+        I6_InLink_1:
+          Value: false
+        I6_Link:
+          Value: false
+        I6_Lr_Link_0:
+          Value: false
+        I6_OutLink_2:
+          Value: false
+        T2_InLink_1:
+          Value: false
+        T2_Link:
+          Value: false
+        T2_Lr_Link_3:
+          Value: false
+        T2_Offset_Link:
+          Value: false
+        T2_Offset_Lr_Link_3:
+          Value: false
+        T2_OutLink_2:
+          Value: false
+        T4_InLink_1:
+          Value: false
+        T4_Link:
+          Value: false
+        T4_Lr_Link_3:
+          Value: false
+        T4_Offset_Link:
+          Value: false
+        T4_Offset_Lr_Link_3:
+          Value: false
+        T4_OutLink_2:
+          Value: false
+        T5_InLink_1:
+          Value: false
+        T5_Link:
+          Value: false
+        T5_Lr_Link_0:
+          Value: false
+        T5_OutLink_2:
+          Value: false
+        _G0_Link:
+          Value: false
+        _G0_finger_link_l:
+          Value: false
+        _G0_finger_link_r:
+          Value: false
+        _G0_palm_link:
+          Value: false
+        _G0_tcp:
+          Value: false
+        _G7_Link:
+          Value: false
+        _G7_finger_link_l:
+          Value: false
+        _G7_finger_link_r:
+          Value: false
+        _G7_palm_link:
+          Value: false
+        _G7_tcp:
+          Value: false
+        _I1_InLink_1:
+          Value: false
+        _I1_Link:
+          Value: false
+        _I1_Lr_Link_0:
+          Value: false
+        _I1_OutLink_2:
+          Value: false
+        _I3_InLink_1:
+          Value: false
+        _I3_Link:
+          Value: false
+        _I3_Lr_Link_0:
+          Value: false
+        _I3_OutLink_2:
+          Value: false
+        _I6_InLink_1:
+          Value: false
+        _I6_Link:
+          Value: false
+        _I6_Lr_Link_0:
+          Value: false
+        _I6_OutLink_2:
+          Value: false
+        _T2_InLink_1:
+          Value: false
+        _T2_Link:
+          Value: false
+        _T2_Lr_Link_0:
+          Value: false
+        _T2_OutLink_2:
+          Value: false
+        _T4_InLink_1:
+          Value: false
+        _T4_Link:
+          Value: false
+        _T4_Lr_Link_0:
+          Value: false
+        _T4_OutLink_2:
+          Value: false
+        _T5_InLink_1:
+          Value: false
+        _T5_Link:
+          Value: false
+        _T5_Lr_Link_3:
+          Value: false
+        _T5_Offset_Link:
+          Value: false
+        _T5_Offset_Lr_Link_3:
+          Value: false
+        _T5_OutLink_2:
+          Value: false
+        _sl_Link:
+          Value: false
+        _sl_link:
+          Value: false
+        base:
+          Value: true
+        base_gripper_0:
+          Value: false
+        base_gripper_7:
+          Value: false
+        sl_Link:
+          Value: false
+        sl_link:
+          Value: false
+        world:
+          Value: true
+      Marker Scale: 0.400000006
+      Name: TF
+      Show Arrows: true
+      Show Axes: true
+      Show Names: true
+      Tree:
+        world:
+          base:
+            base_gripper_0:
+              G0_Link:
+                G0_palm_link:
+                  G0_finger_link_l:
+                    {}
+                  G0_finger_link_r:
+                    {}
+                  G0_tcp:
+                    {}
+                  I1_Lr_Link_0:
+                    I1_InLink_1:
+                      I1_OutLink_2:
+                        I1_Link:
+                          T2_Lr_Link_3:
+                            T2_Offset_Lr_Link_3:
+                              T2_OutLink_2:
+                                T2_InLink_1:
+                                  T2_Offset_Link:
+                                    T2_Link:
+                                      I3_Lr_Link_0:
+                                        I3_InLink_1:
+                                          I3_OutLink_2:
+                                            I3_Link:
+                                              T4_Lr_Link_3:
+                                                T4_Offset_Lr_Link_3:
+                                                  T4_OutLink_2:
+                                                    T4_InLink_1:
+                                                      T4_Offset_Link:
+                                                        T4_Link:
+                                                          sl_link:
+                                                            sl_Link:
+                                                              T5_Lr_Link_0:
+                                                                T5_InLink_1:
+                                                                  T5_OutLink_2:
+                                                                    T5_Link:
+                                                                      I6_Lr_Link_0:
+                                                                        I6_InLink_1:
+                                                                          I6_OutLink_2:
+                                                                            I6_Link:
+                                                                              G7_Link:
+                                                                                G7_palm_link:
+                                                                                  G7_finger_link_l:
+                                                                                    {}
+                                                                                  G7_finger_link_r:
+                                                                                    {}
+                                                                                  G7_tcp:
+                                                                                    {}
+          base_gripper_7:
+            _G7_Link:
+              _G7_palm_link:
+                _G7_finger_link_l:
+                  {}
+                _G7_finger_link_r:
+                  {}
+                _G7_tcp:
+                  {}
+                _I6_Lr_Link_0:
+                  _I6_InLink_1:
+                    _I6_OutLink_2:
+                      _I6_Link:
+                        _T5_Lr_Link_3:
+                          _T5_Offset_Lr_Link_3:
+                            _T5_OutLink_2:
+                              _T5_InLink_1:
+                                _T5_Offset_Link:
+                                  _T5_Link:
+                                    _sl_link:
+                                      _sl_Link:
+                                        _T4_Lr_Link_0:
+                                          _T4_InLink_1:
+                                            _T4_OutLink_2:
+                                              _T4_Link:
+                                                _I3_Lr_Link_0:
+                                                  _I3_InLink_1:
+                                                    _I3_OutLink_2:
+                                                      _I3_Link:
+                                                        _T2_Lr_Link_0:
+                                                          _T2_InLink_1:
+                                                            _T2_OutLink_2:
+                                                              _T2_Link:
+                                                                _I1_Lr_Link_0:
+                                                                  _I1_InLink_1:
+                                                                    _I1_OutLink_2:
+                                                                      _I1_Link:
+                                                                        _G0_Link:
+                                                                          _G0_palm_link:
+                                                                            _G0_finger_link_l:
+                                                                              {}
+                                                                            _G0_finger_link_r:
+                                                                              {}
+                                                                            _G0_tcp:
+                                                                              {}
+      Update Interval: 0
+      Value: true
+    - Class: rviz/MarkerArray
+      Enabled: true
+      Marker Topic: /visualization_marker
+      Name: MarkerArray
+      Namespaces:
+        point: true
+        pole: true
+        traj_line: true
+        traj_point: true
+        wall: true
+      Queue Size: 100
+      Value: true
+  Enabled: true
+  Global Options:
+    Background Color: 48; 48; 48
+    Default Light: true
+    Fixed Frame: base
+    Frame Rate: 30
+  Name: root
+  Tools:
+    - Class: rviz/Interact
+      Hide Inactive Objects: true
+    - Class: rviz/MoveCamera
+    - Class: rviz/Select
+    - Class: rviz/FocusCamera
+    - Class: rviz/Measure
+    - Class: rviz/SetInitialPose
+      Topic: /initialpose
+    - Class: rviz/SetGoal
+      Topic: /move_base_simple/goal
+    - Class: rviz/PublishPoint
+      Single click: true
+      Topic: /clicked_point
+  Value: true
+  Views:
+    Current:
+      Class: rviz/Orbit
+      Distance: 5.51188755
+      Enable Stereo Rendering:
+        Stereo Eye Separation: 0.0599999987
+        Stereo Focal Distance: 1
+        Swap Stereo Eyes: false
+        Value: false
+      Focal Point:
+        X: 0.687213898
+        Y: -0.28336674
+        Z: 0.480399638
+      Focal Shape Fixed Size: true
+      Focal Shape Size: 0.0500000007
+      Invert Z Axis: false
+      Name: Current View
+      Near Clip Distance: 0.00999999978
+      Pitch: 0.415398121
+      Target Frame: <Fixed Frame>
+      Value: Orbit (rviz)
+      Yaw: 1.7753973
+    Saved: ~
+Window Geometry:
+  Displays:
+    collapsed: false
+  Height: 1056
+  Hide Left Dock: false
+  Hide Right Dock: false
+  QMainWindow State: 000000ff00000000fd00000004000000000000015600000388fc0200000008fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005c00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000003a00000388000000c600fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261000000010000010f00000388fc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073010000003a000003880000009e00fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000007450000003efc0100000002fb0000000800540069006d00650100000000000007450000024400fffffffb0000000800540069006d00650100000000000004500000000000000000000004d40000038800000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  Selection:
+    collapsed: false
+  Time:
+    collapsed: false
+  Tool Properties:
+    collapsed: false
+  Views:
+    collapsed: false
+  Width: 1861
+  X: 59
+  Y: 24

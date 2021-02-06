@@ -1,0 +1,47 @@
+# 是否可视化机器人末端轨迹
+if_display_robot_tcp_trajectory: true
+
+# 机器人以g0基座关节名称
+joint_names: [G0_Joint, I1_Joint, T2_Joint, I3_Joint, T4_Joint, T5_Joint, I6_Joint, G7_Joint, _G7_Joint, _I6_Joint, _T5_Joint, _T4_Joint, _I3_Joint, _T2_Joint, _I1_Joint, _G0_Joint]
+# 机器人关节运动方向设置， 防止urdf运动方向与运动学模型运动方向不一致(1:正方向; -1:负方向)
+# I1_Joint, T2_Joint, I3_Joint, T4_Joint, T5_Joint, I6_Joint
+joint_pos_direction: [1,1,1,1,1,1]
+# _I1_Joint, _T2_Joint, _I3_Joint, _T4_Joint, _T5_Joint, _I6_Joint
+joint_neg_direction: [-1,-1,-1,-1,-1,-1]
+
+# 最大关节运动速度
+max_joint_velocity: 30
+
+# 世界坐标系; 根据urdf决定
+world_axis: "/world"
+
+# g0 base端; 根据urdf决定
+g0_base: "/base_gripper_0"
+positive_tcp: "/G7_tcp"
+
+# g7 base端; 根据urdf决定
+g6_base: "/base_gripper_7"
+negetive_tcp: "/_G0_tcp"
+
+# 机器人发送关节命令话题
+joint_commands_topic: "/mr_simulation/joint_commands"
+
+# 关节控制命令话题缓冲区大小
+joint_commands_topic_queue_size: 5
+
+# 机器人当前状态话题
+joint_state_topic: "/mr_simulation/joint_states"
+
+# 接收机器人状态话题缓冲区大小
+joint_state_topic_queue_size: 1
+
+# 夹持器打开距离
+gripper_open_distance: 0.04
+
+# 夹持器关闭距离
+gripper_close_distance: 0
+
+# 环境构建话题
+generate_environment_topic: "visualization_marker"
+
+
