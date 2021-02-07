@@ -669,7 +669,9 @@ void NewModularRobotSimulation::climbotStepMove(   \
     // gripper open
     gripperControl( temp, GRIPPER_ACTION::OPEN);
 
-    environment_generator_->clearRobotStepLineStrip();
+    if(if_generate_display_tcp_traj_){
+        environment_generator_->clearRobotStepLineStrip();
+    }
 
     sentJointCommands(data);
 
