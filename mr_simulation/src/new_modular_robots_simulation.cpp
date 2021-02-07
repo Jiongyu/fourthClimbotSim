@@ -205,7 +205,8 @@ NewModularRobotSimulation::NewModularRobotSimulation(/* args */)
 
 }
 
-int NewModularRobotSimulation::sentJointCommands(  \
+int NewModularRobotSimulation::
+sentJointCommands(  \
     std::vector<std::vector<double> >& path_list)
 {
     for(size_t i = 0; i < path_list.size(); ++i)
@@ -501,6 +502,7 @@ int NewModularRobotSimulation::sentJointCommands_( \
     int length = cmd.size();
     int i = 0;
     ros::Rate hz(traj_rate_hz_);
+
     while (i < length)
     {
         pub_joint_command_->publish(cmd[i]);
@@ -666,6 +668,8 @@ void NewModularRobotSimulation::climbotStepMove(   \
 
     // gripper open
     gripperControl( temp, GRIPPER_ACTION::OPEN);
+
+    environment_generator_->clearRobotStepLineStrip();
 
     sentJointCommands(data);
 

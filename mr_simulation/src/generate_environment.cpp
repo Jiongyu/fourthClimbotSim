@@ -60,7 +60,6 @@ void EnvironmentGenerator::addPoint(const std::vector<double>& position,    \
 
 void EnvironmentGenerator::addLineStrip(const std::vector<double>& position)
 {
-
     setTrajMarker(position, MARK_TYPE::POINT);
     setTrajMarker(position, MARK_TYPE::LINE_STRIP);
     generateEnvironment_();
@@ -288,7 +287,7 @@ void EnvironmentGenerator::setTrajMarker(const std::vector<double>& position, \
         mark_->color.g = 0;
         mark_->color.b = 0;
         mark_->color.a = 1;
-        mark_->id = 1000;
+        mark_->id = item_number_ ++ ;
     }else if(type == MARK_TYPE::LINE_STRIP){
         mark_->ns = "traj_line";
         mark_->scale.x = 0.01;
@@ -299,7 +298,7 @@ void EnvironmentGenerator::setTrajMarker(const std::vector<double>& position, \
         mark_->color.g = 0;
         mark_->color.b = 1;
         mark_->color.a = 1;
-        mark_->id = 1001;
+        mark_->id = item_number_ ++ ;
     }
     mark_array_->markers.push_back(*(mark_.get()));
 }
