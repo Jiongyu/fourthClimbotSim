@@ -1,5 +1,5 @@
 # 是否可视化机器人末端轨迹
-if_display_robot_tcp_trajectory: true
+if_display_robot_tcp_trajectory: false
 
 # 机器人以g0基座关节名称
 joint_names: [G0_Joint, I1_Joint, T2_Joint, I3_Joint, T4_Joint, T5_Joint, I6_Joint, G7_Joint, _G7_Joint, _I6_Joint, _T5_Joint, _T4_Joint, _I3_Joint, _T2_Joint, _I1_Joint, _G0_Joint]

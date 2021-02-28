@@ -402,21 +402,23 @@ std::vector<sensor_msgs::JointState>   \
             for(size_t j = 0; j < joint_derta.size(); ++ j)
             {
                 // 判断哪个机器人
-                    if(0 != joint_derta[j]){
-                        // j+1: 跳过夹持器
-                        joint_command_msg_->position[j + temp_start_position] =\
-                            path_list[i][j] * DEG_TO_RAD_ + \
-                            index * joint_derta[j]; 
-                    }else{
-                        joint_command_msg_->position[j + temp_start_position] =\
-                            path_list[i][j] * DEG_TO_RAD_;
-                    }
-                // std::cout << joint_command_msg_->position[j + 1] << " ";
+                if(0 != joint_derta[j]){
+                    // j+1: 跳过夹持器
+                    joint_command_msg_->position[j + temp_start_position] =\
+                        path_list[i][j] * DEG_TO_RAD_ + \
+                        index * joint_derta[j]; 
+                }else{
+                    joint_command_msg_->position[j + temp_start_position] =\
+                        path_list[i][j] * DEG_TO_RAD_;
+                }
+                // std::cout << joint_command_msg_->position[j + temp_start_position] << " ";
             }
             // std::cout << "\n";
             traj_list.push_back(*joint_command_msg_);
             index ++;
         }
+        
+
     }
 
     return traj_list;
@@ -506,6 +508,11 @@ int NewModularRobotSimulation::sentJointCommands_( \
     while (i < length)
     {
         pub_joint_command_->publish(cmd[i]);
+        ros::spinOnce();
+        // for(size_t j = 0 ; j < cmd[i].position.size(); ++j){
+        //     std::cout << cmd[i].position[j] << " ";
+        // }
+        // std::cout << std::endl;
         hz.sleep();
         i++;
 
@@ -513,6 +520,17 @@ int NewModularRobotSimulation::sentJointCommands_( \
             generate_display_tcp_trajectory();
         }
     }
+    
+    // 最后一个路径点发送3次
+    int j = 0;
+    while(j < 3){
+        pub_joint_command_->publish(cmd[length - 1]);
+        ros::spinOnce();
+        hz.sleep();
+        j++;
+    }
+
+
     return 0;
 }
 
@@ -674,6 +692,7 @@ void NewModularRobotSimulation::climbotStepMove(   \
     }
 
     sentJointCommands(data);
+    // ros::Duration(5).sleep();
 
     // gripper close
     gripperControl( temp, GRIPPER_ACTION::CLOSE);
