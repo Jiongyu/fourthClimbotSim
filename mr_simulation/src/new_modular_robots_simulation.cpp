@@ -417,7 +417,13 @@ std::vector<sensor_msgs::JointState>   \
             traj_list.push_back(*joint_command_msg_);
             index ++;
         }
-        
+
+        // 添加最后一点
+        for(size_t j = 0; j < joint_derta.size(); ++ j){
+            joint_command_msg_->position[j + temp_start_position] =     \
+                path_list[i + 1][j] * DEG_TO_RAD_;
+        }
+        traj_list.push_back(*joint_command_msg_);
 
     }
 
@@ -509,16 +515,18 @@ int NewModularRobotSimulation::sentJointCommands_( \
     {
         pub_joint_command_->publish(cmd[i]);
         ros::spinOnce();
-        // for(size_t j = 0 ; j < cmd[i].position.size(); ++j){
-        //     std::cout << cmd[i].position[j] << " ";
-        // }
-        // std::cout << std::endl;
         hz.sleep();
         i++;
 
         if(if_generate_display_tcp_traj_){
             generate_display_tcp_trajectory();
         }
+
+        // for(size_t j = 0 ; j < cmd[i].position.size(); ++j){
+        //     std::cout << cmd[i].position[j] << " ";
+        // }
+        // std::cout << std::endl;
+
     }
     
     // 最后一个路径点发送3次
