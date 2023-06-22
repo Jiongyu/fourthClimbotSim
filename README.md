@@ -1,5 +1,7 @@
 ###  BIRL 双手爪攀爬机器人仿真
 
+![image](https://github.com/Jiongyu/fourthClimbotSim/blob/main/video.gif)
+
 #### 1. 安装
 
 ``` bash
